@@ -1,0 +1,200 @@
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <nav id="navbar">
+    <header>
+    JavaScript Documentation
+    </header>
+    <ul>
+      <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+      <li><a class="nav-link" href="#What_you_should_already_know">What you should already know</a></li>
+      <li><a class="nav-link" href="#Hello_world">Hello world</a></li>
+      <li><a class="nav-link" href="#Data_types">Data types</a></li>
+      <li><a class="nav-link" href="#Variables">Variables</a></li>
+      <li><a class="nav-link" href="#Variables_scope">Variables scope</a></li>
+      <li><a class="nav-link" href="#Conditional_statements">Conditional Statements</a></li>
+      <li><a class="nav-link" href="#Loops">Loops</a></li>
+      <li><a class="nav-link" href="#Functions">Functions</a></li>
+      <li><a class="nav-link" href="#Reference">Reference</a></li>
+    </ul>
+  </nav>
+  <main id="main-doc">
+    <section class="main-section" id="Introduction">
+      <header>Introduction </header>
+      <article>
+        <p>JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. </p>
+        <p>JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, declarative (e.g. functional programming) styles
+        </p>
+      </article>
+    </section>
+    
+    <section class="main-section" id="What_you_should_already_know">
+      <header>What you should already know </header>
+      <article>
+        <p>This guide assumes you have the following basic background:</p>
+
+        <ul>
+          <li>A general understanding of the Internet and the World Wide Web (WWW)</li>
+          <li>Good working knowledge of HyperText Markup Language (HTML)
+          </li>
+          <li>Some programming experience. If you are new to programming, try one of the tutorials linked on the main page about JavaScript
+          </li>
+      </article>
+    </section>
+    
+    <section class="main-section" id="Hello_world">
+      <header>Hello world </header>
+      <article>
+        <p>To get started with writing JavaScript, open the Scratchpad and write your first "Hello world" JavaScript code:</p>
+        <code>function greetMe(yourName) { alert("Hello " + yourName); }
+  greetMe("World");</code>
+        <p>Select the code in the pad and hit Ctrl+R to watch it unfold in your browser!</p>
+      </article>
+    </section>
+    
+    <section class="main-section" id="Data_types">
+      <header>Data types</header>
+      <article>
+          <p>The set of types in the JavaScript language consists of primitive values and objects. </p>
+
+        <ul>
+          <li>Primitive values (immutable datum represented directly at the lowest level of the language) </li>
+          <li>Boolean type </li>
+          <li>Null type</li>
+          <li>Undefined type</li>
+          <li>Number type</li>
+          <li>BigInt type</li>
+          <li>String type</li>
+          <li>Symbol type</li>
+          <li>Objects (collections of properties)</li>
+        </ul>
+      </article>
+    </section>
+    
+    <section class="main-section" id="Variables">
+      <header>Variables</header>
+      <article>
+        <p>Variable means anything that can vary. In JavaScript, a variable stores the data value that can be changed later on. Use the reserved keyword var to declare a variable in JavaScript.
+        </p>
+          
+      </article>
+    </section>
+    
+    <section class="main-section" id="Variables_scope">
+      <header>Variables scope</header>
+      <article>
+        <p>When you declare a variable outside of any function, it is called a global variable, because it is available to any other code in the current document. When you declare a variable within a function, it is called a local variable, because it is available only within that function.</p>
+
+        <p>JavaScript before ECMAScript 2015 does not have block statement scope; rather, a variable declared within a block is local to the function (or global scope) that the block resides within. For example the following code will log 5, because the scope of x is the function (or global context) within which x is declared, not the block, which in this case is an if statement.</p>
+
+        <code>if (true) { var x = 5; } console.log(x);</code> // 5
+This behavior changes, when using the let declaration introduced in ECMAScript 2015.
+
+        <code>if (true) { let y = 5; } console.log(y); </code> // ReferenceError: y is not
+defined
+      </article>
+    </section>
+    
+    <section class="main-section" id="Conditional_statements">
+      <header>Conditional statements</header>
+      <article>
+        <p>Conditional statements control behavior in JavaScript and determine whether or not pieces of code can run.
+
+          There are multiple different types of conditionals in JavaScript including: </p>
+        <ul>
+          <li>
+  “If” statements: where if a condition is true it is used to specify execution for a block of code.
+          </li>
+          <li>
+  “Else” statements: where if the same condition is false it specifies the execution for a block of code.
+          </li>
+          <li>
+  “Else if” statements: this specifies a new test if the first condition is false.
+  Now that you have the basic JavaScript conditional statement definitions, let’s show you examples of each.
+          </li>
+        </ul>
+        EXAMPLE:
+        <code>
+          if ("cat" === "dog") {
+      var outcome = "if block";
+} else {
+      var outcome = "else block";
+}
+outcome;
+OUTPUT
+"else block"
+        </code>
+      </article>
+    </section>
+      
+    <section class="main-section" id="Loops">
+      <header>Loops</header>
+      <article>
+        Loops offer a quick and easy way to do something repeatedly. This chapter of the JavaScript Guide introduces the different iteration statements available to JavaScript.
+
+You can think of a loop as a computerized version of the game where you tell someone to take X steps in one direction, then Y steps in another. For example, the idea "Go five steps to the east" could be expressed this way as a loop:
+
+    <code>
+      for (let step = 0; step < 5; step++) {
+      // Runs 5 times, with values of step 0 through 4.
+      console.log('Walking east one step');
+                                      } </code>
+There are many different kinds of loops, but they all essentially do the same thing: they repeat an action some number of times. (Note that it's possible that number could be zero!)
+
+The various loop mechanisms offer different ways to determine the start and end points of the loop. There are various situations that are more easily served by one type of loop over the others.
+
+The statements for loops provided in JavaScript are:
+          <ul>
+            <li>for statement</li>
+            <li>do...while statement</li>
+            <li>while statement</li>
+            <li>labeled statement</li>
+            <li>break statement</li>
+            <li>continue statement</li>
+            <li>for...in statement</li>
+            <li>for...of statement</li>
+          </ul>
+        </article>
+    </section>
+      
+    <section class="main-section" id="Functions">
+       <header>Functions</header>
+        <article>
+          <p>Functions are one of the fundamental building blocks in JavaScript. A function in JavaScript is similar to a procedure—a set of statements that performs a task or calculates a value, but for a procedure to qualify as a function, it should take some input and return an output where there is some obvious relationship between the input and the output. To use a function, you must define it somewhere in the scope from which you wish to call it.</p>
+          <p><strong> Function declarations </strong></p>
+A function definition (also called a function declaration, or function statement) consists of the function keyword, followed by:
+
+<ol>
+  <li>The name of the function. </li>
+  <li>A list of parameters to the function, enclosed in parentheses and separated by commas.</li>
+  <li>The JavaScript statements that define the function, enclosed in curly brackets, {...}.
+  </li>
+</ol>
+  <p>For example, the following code defines a simple function named square:</p>
+          <code>
+            function square(number) {
+              return number * number;
+            }
+          </code>
+          
+        </article>
+      </section>
+      <section class="main-section" id="Reference">
+    <header>Reference</header>
+    <article>
+      <ul>
+        <li>
+          All the documentation in this page is taken from
+          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">MDN</a>
+        </li>
+      </ul>
+    </article>
+  </section>
+  </main>
+</body>
